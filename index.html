@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect Caps Lock is ON or OFF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="text" name="" id="input" placeholder="Type Here...">
+    <span id="caps"></span>
+
+
+    <script>
+        document.addEventListener('keyup', (e) => {
+            if(e.getModifierState("CapsLock")) {
+                document.getElementById("caps").innerText = "Caps Lock is ON!";
+            }  else  {
+                document.getElementById("caps").innerText = ""
+            }
+        })
+    </script>
+    
+</body>
+</html>
